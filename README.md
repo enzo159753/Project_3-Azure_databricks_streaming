@@ -4,6 +4,8 @@
 
 ### Context & Approach
 This project is split into two parts: a **lift-and-shift migration** of historical bike ride data into Azure (Part 1), and a **real-time ingestion pipeline** where a simulated web application generates ride booking events, publishes them to **Azure Event Hubs**, and Databricks consumes them via a **Spark Declarative Pipeline** (Part 2). 
+To explore the DLT pipeline setup including Streaming Tables and Slowly Changing Dimensions (SCD), navigate to the `uber_SDP` folder, then open the `transformations`.
+
 ```
 GitHub (mock API) ──► ADF Pipeline ──► ADLS Gen2          (Part 1 — Batch)
 Web App (simulator) ──► Azure Event Hubs ──► Databricks DLT  (Part 2 — Streaming)
